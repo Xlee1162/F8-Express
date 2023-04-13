@@ -1,11 +1,13 @@
 {
+  "type": "module",
   "name": "f8-express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect index.js"
+    "watch":"node-sass src/resource/scss/app.scss --output src/resource/public/css/app.css --watch",
+    "start": "nodemon --inspect src/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,12 @@
   },
   "homepage": "https://github.com/Xlee1162/F8-Express#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.6",
+    "serve-static": "^1.15.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^8.0.0"
   }
 }
