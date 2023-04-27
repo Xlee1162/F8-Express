@@ -10,7 +10,6 @@ import morgan from "morgan";
 //const hbs = create({});
 import { engine } from "express-handlebars";
 
-
 const app = express();
 const port = 3000;
 
@@ -33,6 +32,14 @@ app.get("/", (req, res) => {
 
 app.get("/news", (req, res) => {
   res.render("news");
+});
+app.get("/search", (req, res) => {
+  
+  res.render("search");
+});
+app.post("/search", (req, res) => {
+  
+  res.send("search");
 });
 
 app.listen(port, () => {
